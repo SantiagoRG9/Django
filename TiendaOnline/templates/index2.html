@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <ul>
+        {% for product in products %}
+            <li> {{product.id}} / {{product.name}} </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{%url 'vista'%}">Ir</a>
+{% endblock  %}
+

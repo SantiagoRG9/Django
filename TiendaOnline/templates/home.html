@@ -16,12 +16,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href=" {% static 'lib/adminlte-3.1.0/plugins/fontawesome-free/css/all.min.css' %} ">
   <!-- Theme style -->
-  <link rel="stylesheet" href=" {% static '../static/lib/adminlte-3.1.0/css/adminlte.min.css' %} ">
-</head>
+  <link rel="stylesheet" href=" {% static 'lib/adminlte-3.1.0/css/adminlte.min.css' %} ">
+  <!-- head -->
+  {% block head %}
 
-  {% block body %}
-  {% endblock %}
-
+  {% endblock head %}
    <!-- jQuery -->
    <script src="{% static 'lib/adminlte-3.1.0/plugins/jquery/jquery.min.js' %}"></script>
    <!-- Bootstrap 4 -->
@@ -30,4 +29,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
    <script src="{% static 'lib/adminlte-3.1.0/js/adminlte.min.js' %}"></script>
    <!-- AdminLTE for demo purposes -->
    <script src="{% static 'lib/adminlte-3.1.0/js/demo.js' %}"></script>
+
+   
+  <script type="text/javascript" src="{% static 'lib/datatables-1.10.20/jquery.dataTables.min.js' %}"></script>
+  <script src="{% static 'lib/datatables-1.10.20/js/jquery.dataTables.js' %}"></script>
+  <script src="{% static 'lib/datatables-1.10.20/js/dataTables.bootstrap4.min.js' %}"></script>
+  <script src="{% static 'lib/datatables-1.10.20/plugins/responsive-2.2.3/js/dataTables.responsive.min.js' %}"></script>
+  <script src="{% static 'lib/datatables-1.10.20/plugins/responsive-2.2.3/js/responsive.bootstrap4.min.js' %}"></script>
+  <script src="{% static 'lib/datatables-1.10.20/jquery.dataTables.min.js' %}"></script>
+  <script src="{% static 'lib/datatables-1.10.20/jquery.dataTables.min.js' %}"></script> 
+  </head>
+  {% block body %}
+  {% endblock %}
 </html>

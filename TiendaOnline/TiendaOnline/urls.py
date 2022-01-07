@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from gestionpedidos.views import myfirstview, mysecondview
+from gestionpedidos.views.category.views import category_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('uno/', myfirstview, name='vista'),
-    path('dos/', mysecondview, name='vista1'),
+    path('erp/', category_list),
 ]

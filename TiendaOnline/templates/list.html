@@ -28,9 +28,9 @@
         </table>
         <div>
         <div class="card-footer">
-            <button class="btn btn-primary btn-flat btnTest">
+            <a href="{{ create_url }}" class="btn btn-primary btn-flat btnTest">
                 <i class="fas fa-plus"></i>&nbsp; Nuevo registro
-            </button>
+            </a>
         </div>
         </div>
     </div>
@@ -43,20 +43,17 @@
                 responsive: true,
                 autoWidth: false
             });
-
-            $('. btnTest').on('click', function () {
-                $ajax({
-                    url: ,
+            $('.btnTest').on('click', function () {
+                $.ajax({
+                    url: '{% url 'categoryList' %}',
                     type: 'POST',
-                    data: {id: 1},
-                    dataType: 'json'
+                    data: {id: 7},
+                    dataType: 'json',
                 }).done(function (data){
                     console.log(data)
                 }).fail(function (data){
                     alert("error");
-                }).always(function (data){
-                    
-                });
+                })
             });
         });
 

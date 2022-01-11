@@ -20,6 +20,7 @@ from gestionpedidos.views.category.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('erp/', CategoryListView.as_view(), name='category_list'),
-    path('erp2/', category_list, name='category_list2'),
+    path('erp/', CategoryListView.as_view(), name='categoryList'),
+    path('erp2/', category_list),
+    path('erp3/', CategoryCreateView.as_view(), name='categoryCreate'),
 ]

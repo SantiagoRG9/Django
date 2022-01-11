@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime
 from django.db.models.deletion import CASCADE
+from django.forms import model_to_dict
 
 class Type(models.Model):
     names = models.CharField(max_length=150, verbose_name='Nombres')
@@ -9,10 +10,15 @@ class Type(models.Model):
         return self.names
 
 class Category(models.Model):
-    names = models.CharField(max_length=150, verbose_name='Nombres')
+    names = models.CharField(max_length=150, verbose_name='Nombres', unique=True)
+    desc = models.CharField(max_length=500, null=True, blank=True, verbose_name='Descripcion')
 
     def __str__(self):
         return self.names
+
+    def toJSON(self):
+        item = model_to_dict
+        return item
 
 class Employee(models.Model):
     categ = models.ManyToManyField(Category)
